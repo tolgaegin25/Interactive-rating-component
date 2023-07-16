@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(216, 12%, 54%);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.container .area {
+  width: 420px;
+  height: max-content;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(213, 19%, 18%),
+    hsla(213, 19%, 18%, 0.3)
+  );
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+  padding: 40px;
+  gap: 30px;
+}
+
+.container .area .icon {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: hsl(216, 12%, 54%, 0.1);
+}
+
+.container .area h3 {
+  font-size: 32px;
+  color: hsl(0, 0%, 100%);
+}
+
+.container .rate {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.container .rate button {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: hsl(216, 12%, 54%, 0.1);
+  color:hsl(216, 12%, 54%);
+  border: 0px;
+}
+
+.container .rate button:hover {
+  background-color: hsl(25, 97%, 53%);
+  color:hsl(0, 0%, 100%);
+}
+.container .rate button.selected {
+  background-color: #808080;
+  color: #fff;
+}
+
+.container button {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+}
+
+.container .area .submit-btn:hover {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(0, 0%, 100%);
+  transition-duration:300ms;
+}
+
+.container .thank-you {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container .thank-you .selected-message {
+  color: hsl(25, 97%, 53%);
+  padding: 10px 30px;
+  background-color: hsl(216, 12%, 54%, 0.1);
+  border-radius: 30px;
+}
+
+@media screen and (max-width:768px){
+
+    .container {
+        padding: 0 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container .area{
+        gap:20px;
+        padding:30px 20px;
+      }
+}
